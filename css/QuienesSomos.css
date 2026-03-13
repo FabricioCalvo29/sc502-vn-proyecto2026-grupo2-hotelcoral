@@ -1,0 +1,349 @@
+:root {
+    --ColorPrimario: #2f6f66;
+    --ColorSecundario: #86b8ae;
+    --ColorFondo: #f7f5ef;
+    --ColorTarjeta: #ffffff;
+    --ColorTexto: #2d2d2d;
+    --ColorTextoSuave: #6a6a6a;
+    --ColorBorde: #dfe7e3;
+
+    --RadiusPequeno: 5px;
+    --RadiusMediano: 10px;
+    --RadiusGrande: 20px;
+
+    --SombraSuave: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+    --TituloFont: "Zain", sans-serif;
+    --TextoFont: "Chiron GoRound TC", sans-serif;
+    --DetalleFont: "Quicksand", sans-serif;
+
+    --ContainerWidth: min(1100px, 92%);
+    --EspaciadoSeccion: clamp(2rem, 5vw, 5rem);
+}
+
+body {
+    background-color: var(--ColorFondo);
+    color: var(--ColorTexto);
+    margin: 0;
+    padding: 0;
+    font-family: var(--TextoFont);
+}
+
+.QuienesSomosPage {
+    width: var(--ContainerWidth);
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+/* HERO */
+
+.HeroQuienesSomos {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: var(--EspaciadoSeccion) 0;
+}
+
+.EtiquetaSeccion {
+    display: inline-block;
+    background-color: #e5f1ee;
+    color: var(--ColorPrimario);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-family: var(--DetalleFont);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.HeroContenido h1 {
+    font-family: var(--TituloFont);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 0.95;
+    margin: 0 0 1rem;
+    color: var(--ColorPrimario);
+}
+
+.HeroContenido p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ColorTextoSuave);
+    margin: 0;
+}
+
+.HeroImagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--RadiusGrande);
+    box-shadow: var(--SombraSuave);
+}
+
+/* SECCIONES */
+
+.HistoriaSection,
+.ValoresSection,
+.HotelesSection,
+.FaqSection {
+    padding: var(--EspaciadoSeccion) 0;
+}
+
+/* TITULOS */
+
+.TituloBloque {
+    margin-bottom: 1.8rem;
+}
+
+.TituloBloque span {
+    display: block;
+    font-family: var(--DetalleFont);
+    font-size: 0.95rem;
+    color: var(--ColorSecundario);
+    margin-bottom: 0.4rem;
+}
+
+.TituloBloque h2 {
+    font-family: var(--TituloFont);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    color: var(--ColorPrimario);
+    margin: 0;
+}
+
+/* HISTORIA */
+
+.HistoriaContenido {
+    background-color: var(--ColorTarjeta);
+    border: 1px solid var(--ColorBorde);
+    border-radius: var(--RadiusGrande);
+    padding: 1.6rem;
+    box-shadow: var(--SombraSuave);
+}
+
+.HistoriaContenido p {
+    margin: 0 0 1rem;
+    line-height: 1.8;
+    color: var(--ColorTextoSuave);
+}
+
+.HistoriaContenido p:last-child {
+    margin-bottom: 0;
+}
+
+/* LISTA RECOMENDACIONES */
+
+.ListaRecomendaciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ListaRecomendaciones li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: var(--ColorTextoSuave);
+}
+
+/* GRID TARJETAS */
+
+.ValoresGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+.TarjetaValor {
+    background-color: var(--ColorTarjeta);
+    border: 1px solid var(--ColorBorde);
+    border-radius: var(--RadiusMediano);
+    padding: 1.4rem;
+    box-shadow: var(--SombraSuave);
+}
+
+.TarjetaValor h3 {
+    font-family: var(--TituloFont);
+    font-size: 2rem;
+    color: var(--ColorPrimario);
+    margin: 0 0 0.7rem;
+}
+
+.TarjetaValor p {
+    margin: 0;
+    color: var(--ColorTextoSuave);
+    line-height: 1.7;
+}
+
+/* HOTELES */
+
+.HotelesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+}
+
+.TarjetaHotel {
+    background-color: var(--ColorTarjeta);
+    border-radius: var(--RadiusGrande);
+    overflow: hidden;
+    border: 1px solid var(--ColorBorde);
+    box-shadow: var(--SombraSuave);
+    position: relative;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.TarjetaHotel img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.TarjetaHotel:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.TarjetaHotel:hover img {
+    transform: scale(1.08);
+}
+
+.TarjetaHotel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.18),
+        rgba(0, 0, 0, 0.02)
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.TarjetaHotel:hover::after {
+    opacity: 1;
+}
+
+.ContenidoHotel {
+    padding: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.ContenidoHotel h3 {
+    font-family: var(--TituloFont);
+    font-size: 2.3rem;
+    color: var(--ColorPrimario);
+    margin: 0 0 0.5rem;
+}
+
+.ContenidoHotel p {
+    margin: 0;
+    color: var(--ColorTextoSuave);
+    line-height: 1.7;
+}
+
+/* FAQ */
+
+.FaqContainer {
+    display: grid;
+    gap: 1rem;
+}
+
+.FaqItem {
+    background-color: var(--ColorTarjeta);
+    border: 1px solid var(--ColorBorde);
+    border-radius: var(--RadiusMediano);
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--SombraSuave);
+}
+
+.FaqItem h3 {
+    margin: 0 0 0.5rem;
+    font-family: var(--TextoFont);
+    font-size: 1.05rem;
+    color: var(--ColorPrimario);
+}
+
+.FaqItem p {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--ColorTextoSuave);
+}
+
+/* AYUDA */
+
+.AyudaSection {
+    padding-top: 40px;
+}
+
+.SubtextoAyuda {
+    margin-top: 18px;
+    line-height: 1.9;
+    color: var(--ColorTextoSuave);
+    font-size: 1.02rem;
+}
+
+/* TARJETAS AYUDA */
+
+.TarjetaAyuda {
+    text-align: center;
+    padding: 1.8rem 1.4rem;
+}
+
+.TextoPrincipal {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--ColorPrimario);
+}
+
+.TextoSecundario {
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .HeroQuienesSomos {
+        grid-template-columns: 1fr;
+    }
+
+    .ValoresGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .HotelesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .HeroImagen img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ValoresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .HistoriaContenido,
+    .TarjetaValor,
+    .FaqItem {
+        padding: 1rem;
+    }
+
+    .HeroImagen img {
+        height: 250px;
+    }
+
+    .TarjetaAyuda {
+        padding: 1.2rem;
+    }
+}
