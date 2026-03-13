@@ -4,28 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Coral | Telefono</title>
+    <title>Hotel Coral | Teléfono</title>
+
     <link rel="stylesheet" href="css/HeaderStyle.css">
     <link rel="stylesheet" href="css/FooterStyle.css">
     <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/Telefono.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Zain:wght@400;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700;800&family=Chiron+GoRound+TC:wght@400;500;700&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header id="FragmentoHeader"></header>
 
-    <main>
-        <h1>Contenido de Telefono</h1>
+    <main class="SeccionTelefono">
+        <div class="ContenedorTelefono">
+            <section class="EncabezadoTelefono">
+                <h1 class="TituloTelefono">Contacto Telefónico</h1>
+                <p class="TextoTelefono">
+                    Comunícate con nuestro equipo para resolver dudas, solicitar información sobre reservas,
+                    habitaciones, servicios y atención general en nuestras sedes de Hotel Coral.
+                </p>
+            </section>
+
+            <section class="GridTelefono">
+                <article class="TarjetaTelefono">
+                    <h2 class="TituloTarjetaTelefono">Números de atención</h2>
+                    <p class="DescripcionTarjetaTelefono">
+                        Selecciona el número que mejor se adapte a tu consulta. Nuestro equipo estará disponible
+                        para ayudarte de forma rápida y amable.
+                    </p>
+
+                    <div class="ListaContactos">
+                        <div class="ItemContacto">
+                            <div class="IconoContacto">CR</div>
+                            <div class="ContenidoContacto">
+                                <h3>Central de reservas</h3>
+                                <p>Atención general para consultas sobre disponibilidad, precios y reservaciones.</p>
+                                <a class="NumeroPrincipal" href="tel:+50622223333">+506 2222-3333</a>
+                            </div>
+                        </div>
+
+                        <div class="ItemContacto">
+                            <div class="IconoContacto">GU</div>
+                            <div class="ContenidoContacto">
+                                <h3>Sede Guanacaste</h3>
+                                <p>Consultas específicas sobre estadías, habitaciones y atención local.</p>
+                                <a class="NumeroPrincipal" href="tel:+50624567890">+506 2456-7890</a>
+                            </div>
+                        </div>
+
+                        <div class="ItemContacto">
+                            <div class="IconoContacto">PU</div>
+                            <div class="ContenidoContacto">
+                                <h3>Sede Puntarenas</h3>
+                                <p>Información sobre reservaciones, ingreso, salida y servicios disponibles.</p>
+                                <a class="NumeroPrincipal" href="tel:+50626543210">+506 2654-3210</a>
+                            </div>
+                        </div>
+
+                        <div class="ItemContacto">
+                            <div class="IconoContacto">LI</div>
+                            <div class="ContenidoContacto">
+                                <h3>Sede Limón</h3>
+                                <p>Soporte para huéspedes, consultas de contacto y asistencia general.</p>
+                                <a class="NumeroPrincipal" href="tel:+50627998877">+506 2799-8877</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="TarjetaTelefono">
+                    <div class="CajaInfoTelefono">
+                        <h2 class="TituloTarjetaTelefono">Horario de atención</h2>
+                        <p class="DescripcionTarjetaTelefono">
+                            Nuestro equipo de atención telefónica está disponible durante la semana
+                            para ayudarte con reservas y consultas generales.
+                        </p>
+
+                        <ul class="ListaHorarios">
+                            <li>Lunes a viernes: 8:00 a.m. - 6:00 p.m.</li>
+                            <li>Sábados: 9:00 a.m. - 4:00 p.m.</li>
+                            <li>Domingos: 10:00 a.m. - 2:00 p.m.</li>
+                        </ul>
+
+                        <a href="tel:+50622223333" class="BotonLlamar">Llamar ahora</a>
+                    </div>
+                </aside>
+            </section>
+        </div>
     </main>
 
     <footer id="FragmentoFooter"></footer>
-
 
     <script src="js/CargarFragmento.js"></script>
     <script src="js/Header.js"></script>
