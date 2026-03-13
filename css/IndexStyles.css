@@ -1,0 +1,641 @@
+:root {
+    --OceanDeep: #2C6E7F;
+    --SeaTurquoise: #49B7B1;
+    --LagoonLight: #7FD6CF;
+    --JungleGreen: #2F5D3A;
+    --PalmGreen: #5E8B4A;
+    --SandBeige: #D9C3A3;
+    --SoftCream: #F5EFE6;
+    --Driftwood: #9C7E5E;
+    --CoralAccent: #D97B5D;
+    --TextDark: #243238;
+    --TextSoft: #5C6A70;
+    --White: #FFFFFF;
+    --BorderSoft: #E7EBEE;
+    --ShadowSoft: 0 12px 35px rgba(36, 50, 56, 0.08);
+    --ShadowHover: 0 18px 40px rgba(36, 50, 56, 0.14);
+    --RadiusSmall: 12px;
+    --RadiusMedium: 18px;
+    --RadiusLarge: 28px;
+    --MaxWidth: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #F7F8F9;
+    color: var(--TextDark);
+    font-family: "Chiron GoRound TC", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ContenidoPrincipal {
+    width: 100%;
+}
+
+.SeccionGeneral {
+    padding: 96px 24px;
+}
+
+.SeccionHabitaciones,
+.SeccionComentarios {
+    max-width: var(--MaxWidth);
+    margin: 0 auto;
+}
+
+.EncabezadoSeccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.EncabezadoCentrado {
+    text-align: center;
+    display: block;
+}
+
+.BloqueTitulos {
+    max-width: 640px;
+}
+
+.SubtituloSeccion {
+    margin: 0 0 8px;
+    color: var(--OceanDeep);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.TituloSeccion {
+    margin: 0;
+    font-family: "Zain", sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    line-height: 0.95;
+    font-weight: 800;
+}
+
+.DescripcionSeccion,
+.ParrafoNosotros,
+.TextoTarjetaServicio,
+.TextoSuscripcion,
+.TextoHero,
+.TextoComentario,
+.DescripcionTarjetaHabitacion {
+    color: var(--TextSoft);
+    line-height: 1.7;
+}
+
+.EnlaceSeccion {
+    color: var(--OceanDeep);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.EnlaceSeccion:hover {
+    text-decoration: underline;
+}
+
+.Boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.SeccionHero {
+    position: relative;
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 24px;
+}
+
+.FondoHero {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.48)),
+        url("../Recursos/Imagenes/HeroFondo.png");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.04);
+}
+
+.ContenedorHero {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    text-align: center;
+}
+
+.EtiquetaHero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(6px);
+}
+
+.EtiquetaLogoHero {
+    min-height: 56px;
+}
+
+.ImagenLogoHero {
+    display: block;
+    height: 250px;
+    width: auto;
+}
+
+.TituloHero {
+    margin: 0 0 20px;
+    color: var(--White);
+    font-family: "Zain", sans-serif;
+    font-size: clamp(4rem, 9vw, 7rem);
+    line-height: 0.9;
+    font-weight: 800;
+}
+
+.TextoResaltado {
+    color: var(--SeaTurquoise);
+}
+
+.TextoHero {
+    max-width: 760px;
+    margin: 0 auto 36px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.08rem;
+}
+
+.AccionesHero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.BotonPrimario,
+.BotonSecundario {
+    min-width: 210px;
+    min-height: 54px;
+    padding: 14px 24px;
+    border-radius: 14px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
+
+.BotonPrimario {
+    background-color: var(--OceanDeep);
+    color: var(--White);
+}
+
+.BotonPrimario:hover {
+    transform: translateY(-2px);
+    background-color: #245967;
+}
+
+.BotonSecundario {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--White);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+}
+
+.BotonSecundario:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+
+
+.CuadriculaHabitaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.TarjetaHabitacion {
+    background-color: var(--White);
+    border: 1px solid var(--BorderSoft);
+    border-radius: var(--RadiusMedium);
+    overflow: hidden;
+    box-shadow: var(--ShadowSoft);
+    transition: 0.25s ease;
+}
+
+.TarjetaHabitacion:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--ShadowHover);
+}
+
+.ImagenTarjetaHabitacion {
+    position: relative;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.CuadriculaHabitaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.TarjetaHabitacion {
+    max-width: 380px;
+    background-color: var(--White);
+    border: 1px solid var(--BorderSoft);
+    border-radius: var(--RadiusMedium);
+    overflow: hidden;
+    box-shadow: var(--ShadowSoft);
+    transition: 0.25s ease;
+}
+
+.TarjetaHabitacion:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--ShadowHover);
+}
+
+.ImagenTarjetaHabitacion {
+    position: relative;
+    height: 260px;
+    background-image: url("../Recursos/Imagenes/HabitacionDeluxe.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.EtiquetaTarjeta {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.ContenidoTarjetaHabitacion {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.EncabezadoTarjetaHabitacion {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: start;
+}
+
+.TituloTarjetaHabitacion {
+    margin: 0;
+    font-family: "Zain", sans-serif;
+    font-size: 2rem;
+    line-height: 0.95;
+}
+
+.PrecioTarjetaHabitacion {
+    margin: 0;
+    color: var(--OceanDeep);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
+
+.PrecioTarjetaHabitacion span {
+    color: #809097;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.DescripcionTarjetaHabitacion {
+    margin: 0;
+    font-size: 0.97rem;
+}
+
+.ListaDetallesTarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ListaDetallesTarjeta li {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: #F1F4F6;
+    color: #62727A;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.BotonTarjeta {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background-color: #EEF2F4;
+    color: var(--TextDark);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.BotonTarjeta:hover {
+    background-color: var(--OceanDeep);
+    color: var(--White);
+}
+
+.SeccionServicios {
+    background-color: var(--SoftCream);
+}
+
+.CuadriculaServicios {
+    max-width: var(--MaxWidth);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.TarjetaServicio {
+    padding: 32px 24px;
+    background-color: var(--White);
+    border: 1px solid var(--BorderSoft);
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: var(--ShadowSoft);
+    transition: 0.25s ease;
+}
+
+.TarjetaServicio:hover {
+    transform: translateY(-6px);
+}
+
+.IconoServicio {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(44, 110, 127, 0.1);
+    color: var(--OceanDeep);
+    overflow: hidden;
+}
+
+.ImagenIconoServicio {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+.TituloTarjetaServicio {
+    margin: 0 0 10px;
+    font-family: "Zain", sans-serif;
+    font-size: 2rem;
+    line-height: 0.95;
+}
+
+.TextoTarjetaServicio {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.RespuestaComentarioHotel {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background-color: #F4F7F8;
+    border-left: 4px solid var(--OceanDeep);
+}
+
+.TituloRespuestaComentario {
+    margin: 0 0 8px;
+    font-family: "Zain", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--OceanDeep);
+}
+
+.TextoRespuestaComentario {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--TextSoft);
+}
+
+.ControlesComentarios {
+    display: flex;
+    gap: 12px;
+}
+
+.BotonControlComentario {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    border: 1px solid #D9E0E4;
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    padding: 0;
+}
+
+.BotonControlComentario:hover {
+    background-color: var(--CoralAccent);
+}
+
+.IconoControlComentario {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+}
+
+.CarruselComentarios {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 8px;
+}
+
+.CarruselComentarios::-webkit-scrollbar {
+    height: 8px;
+}
+
+.CarruselComentarios::-webkit-scrollbar-thumb {
+    background-color: #D2DCE0;
+    border-radius: 999px;
+}
+
+.TarjetaComentario {
+    min-width: 360px;
+    max-width: 440px;
+    padding: 28px;
+    background-color: var(--White);
+    border: 1px solid var(--BorderSoft);
+    border-radius: 22px;
+    box-shadow: var(--ShadowSoft);
+    flex: 0 0 auto;
+}
+
+.EstrellasComentario {
+    margin-bottom: 18px;
+    color: var(--CoralAccent);
+    letter-spacing: 0.18em;
+    font-size: 1rem;
+}
+
+.TextoComentario {
+    margin: 0 0 22px;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.AutorComentario {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.AvatarComentario {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.NombreComentario {
+    margin: 0;
+    font-family: "Zain", sans-serif;
+    font-size: 1.8rem;
+    line-height: 0.95;
+}
+
+.PaisComentario {
+    margin: 0;
+    color: var(--TextSoft);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.82rem;
+}
+
+
+@media (max-width: 1024px) {
+
+    .CuadriculaHabitaciones,
+    .CuadriculaServicios,
+    .ContenedorNosotros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ContenedorNosotros {
+        gap: 40px;
+    }
+
+    .TarjetaMision {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .SeccionGeneral {
+        padding: 72px 18px;
+    }
+
+    .EncabezadoSeccion {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .CuadriculaHabitaciones,
+    .CuadriculaServicios,
+    .ContenedorNosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .CajaSuscripcion {
+        padding: 32px 22px;
+    }
+
+    .TarjetaComentario {
+        min-width: 300px;
+    }
+
+    .TituloHero {
+        font-size: clamp(3.2rem, 14vw, 5rem);
+    }
+
+    .TituloSeccion,
+    .TituloSuscripcion {
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .BotonPrimario,
+    .BotonSecundario,
+    .BotonSuscripcion {
+        width: 100%;
+    }
+
+    .FormularioSuscripcion {
+        flex-direction: column;
+    }
+
+    .IndicadorHero {
+        width: 34px;
+    }
+}
