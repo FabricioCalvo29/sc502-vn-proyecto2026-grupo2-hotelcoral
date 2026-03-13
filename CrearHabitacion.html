@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Nueva Habitación</title>
+
+    <link rel="stylesheet" href="css/HeaderStyle.css">
+    <link rel="stylesheet" href="css/FooterStyle.css">
+    <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/AdminHabitaciones.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zain&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="FragmentoHeader"></header>
+
+    <main class="AdminContainer">
+
+        <div class="TituloAdmin">
+            <h1>Nueva Habitación</h1>
+        </div>
+
+        <form class="FormularioAdmin">
+
+            <label for="NombreHabitacion">Nombre de la habitación</label>
+            <input type="text" id="NombreHabitacion" placeholder="Ejemplo: Habitación Deluxe">
+
+            <label for="PrecioHabitacion">Precio</label>
+            <input type="number" id="PrecioHabitacion" placeholder="Ejemplo: 45000">
+
+            <label for="CapacidadHabitacion">Capacidad de personas</label>
+            <input type="number" id="CapacidadHabitacion" placeholder="Ejemplo: 2">
+
+            <label for="ImagenHabitacion">Imagen</label>
+            <input type="file" id="ImagenHabitacion">
+
+            <label for="DescripcionHabitacion">Descripción</label>
+            <textarea id="DescripcionHabitacion" rows="5" placeholder="Describe la habitación..."></textarea>
+
+            <button type="submit">Guardar Habitación</button>
+
+        </form>
+
+    </main>
+
+    <footer id="FragmentoFooter"></footer>
+
+    <script src="js/CargarFragmento.js"></script>
+    <script src="js/Header.js"></script>
+</body>
+
+</html>

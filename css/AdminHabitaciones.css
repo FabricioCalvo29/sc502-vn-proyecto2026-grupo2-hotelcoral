@@ -1,0 +1,255 @@
+:root {
+    --ColorPrimario: #2f6f66;
+    --ColorSecundario: #86b8ae;
+    --ColorFondo: #f7f5ef;
+    --ColorTarjeta: #ffffff;
+    --ColorTexto: #2d2d2d;
+    --ColorTextoSuave: #6a6a6a;
+    --ColorBorde: #dfe7e3;
+    --ColorPeligro: #d9534f;
+    --ColorExito: #2f6f66;
+
+    --RadiusPequeno: 5px;
+    --RadiusMediano: 10px;
+    --RadiusGrande: 20px;
+
+    --SombraSuave: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+    --TituloFont: "Zain", sans-serif;
+    --TextoFont: "Chiron GoRound TC", sans-serif;
+    --DetalleFont: "Quicksand", sans-serif;
+
+    --ContainerWidth: min(1100px, 92%);
+}
+
+body {
+    background-color: var(--ColorFondo);
+    color: var(--ColorTexto);
+    margin: 0;
+    padding: 0;
+    font-family: var(--TextoFont);
+}
+
+.AdminContainer {
+    width: var(--ContainerWidth);
+    margin: 0 auto;
+    padding: 2.5rem 0 4rem;
+}
+
+.TituloAdmin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.TituloAdmin h1 {
+    font-family: var(--TituloFont);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--ColorPrimario);
+    margin: 0;
+    line-height: 0.95;
+}
+
+.BotonCrear {
+    background-color: var(--ColorPrimario);
+    color: white;
+    border: none;
+    padding: 0.85rem 1.3rem;
+    border-radius: var(--RadiusMediano);
+    cursor: pointer;
+    font-family: var(--DetalleFont);
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+    box-shadow: var(--SombraSuave);
+}
+
+.BotonCrear:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.TablaAdmin {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--ColorTarjeta);
+    border-radius: var(--RadiusGrande);
+    overflow: hidden;
+    box-shadow: var(--SombraSuave);
+    border: 1px solid var(--ColorBorde);
+}
+
+.TablaAdmin thead {
+    background-color: #eef4f2;
+}
+
+.TablaAdmin th {
+    text-align: left;
+    padding: 1rem;
+    font-family: var(--DetalleFont);
+    font-size: 0.95rem;
+    color: var(--ColorPrimario);
+}
+
+.TablaAdmin td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--ColorBorde);
+    color: var(--ColorTextoSuave);
+    vertical-align: middle;
+}
+
+.TablaAdmin tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.TablaAdmin img {
+    width: 80px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: var(--RadiusPequeno);
+    display: block;
+}
+
+.Acciones {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.Acciones button {
+    padding: 0.55rem 0.95rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--DetalleFont);
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.Editar {
+    background-color: var(--ColorSecundario);
+    color: white;
+}
+
+.Editar:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.Eliminar {
+    background-color: var(--ColorPeligro);
+    color: white;
+}
+
+.Eliminar:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.FormularioAdmin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 560px;
+    background-color: var(--ColorTarjeta);
+    border: 1px solid var(--ColorBorde);
+    border-radius: var(--RadiusGrande);
+    padding: 1.5rem;
+    box-shadow: var(--SombraSuave);
+}
+
+.FormularioAdmin label {
+    font-family: var(--DetalleFont);
+    color: var(--ColorPrimario);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.FormularioAdmin input,
+.FormularioAdmin textarea {
+    padding: 0.9rem 1rem;
+    border-radius: var(--RadiusMediano);
+    border: 1px solid var(--ColorBorde);
+    font-family: var(--TextoFont);
+    font-size: 0.98rem;
+    color: var(--ColorTexto);
+    background-color: #fff;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.FormularioAdmin input:focus,
+.FormularioAdmin textarea:focus {
+    border-color: var(--ColorSecundario);
+    box-shadow: 0 0 0 3px rgba(134, 184, 174, 0.18);
+}
+
+.FormularioAdmin textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.FormularioAdmin button {
+    margin-top: 0.5rem;
+    background-color: var(--ColorExito);
+    color: white;
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: var(--RadiusMediano);
+    cursor: pointer;
+    font-family: var(--DetalleFont);
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.FormularioAdmin button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .TablaAdmin {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .TituloAdmin {
+        align-items: flex-start;
+    }
+
+    .FormularioAdmin {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .AdminContainer {
+        padding: 2rem 0 3rem;
+    }
+
+    .TablaAdmin th,
+    .TablaAdmin td {
+        padding: 0.8rem;
+    }
+
+    .BotonCrear {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .Acciones button {
+        width: 100%;
+    }
+}
