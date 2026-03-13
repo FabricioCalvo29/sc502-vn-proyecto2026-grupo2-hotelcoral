@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Coral | Administración de Comentarios</title>
+
+    <link rel="stylesheet" href="css/HeaderStyle.css">
+    <link rel="stylesheet" href="css/FooterStyle.css">
+    <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/Comentarios.css">
+
+    <!-- NUEVO CSS ADMIN -->
+    <link rel="stylesheet" href="css/AdminComentarios.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Zain&family=Quicksand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="FragmentoHeader"></header>
+
+    <!-- PANEL ADMIN -->
+
+    <section class="AdminPanel">
+
+        <h1>Panel de administración de comentarios</h1>
+
+        <p>Gestión de comentarios de los huéspedes</p>
+
+        <div class="AdminStats">
+
+            <div class="StatBox">
+                <strong>126</strong>
+                <span>Total comentarios</span>
+            </div>
+
+            <div class="StatBox">
+                <strong>8</strong>
+                <span>Pendientes</span>
+            </div>
+
+            <div class="StatBox">
+                <strong>118</strong>
+                <span>Aprobados</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMENTARIOS (MISMA ESTRUCTURA QUE YA TIENES) -->
+
+    <section class="ComentariosRecientes">
+
+        <h2>Comentarios de huéspedes</h2>
+
+        <div class="BarraModeracion">
+
+            <div class="FiltrosModeracion">
+
+                <button class="FiltroActivo">Pendientes</button>
+                <button>Aprobados</button>
+                <button>Spam</button>
+
+            </div>
+
+            <div class="BusquedaModeracion">
+
+                <input type="text" placeholder="Buscar comentario...">
+
+            </div>
+
+        </div>
+
+
+        <!-- Stacy -->
+        <div class="TarjetaComentario AdminComentario">
+
+            <div class="EstadoComentario EstadoAprovado">
+                Aprobado
+            </div>
+
+            <div class="ComentarioHeaderTarjeta">
+
+                <div class="UsuarioInfo">
+                    <div class="Avatar">S</div>
+
+                    <div>
+                        <h3>Stacy Ramírez</h3>
+                        <span class="Lugar">Puntarenas</span>
+                    </div>
+                </div>
+
+                <div class="EstrellasComentario">
+                    ★★★★★
+                </div>
+
+            </div>
+
+            <p>
+                El hotel fue increíble, la vista al mar y el servicio fueron excelentes.
+                Definitivamente volvería.
+            </p>
+
+            <!-- RESPUESTA HOTEL -->
+
+            <div class="RespuestaHotel">
+
+                <div class="AdminInfo">
+                    <div class="AvatarAdmin">H</div>
+                    <strong>Hotel Coral</strong>
+                </div>
+
+                <p>
+                    Muchas gracias por tu visita Stacy. Nos alegra saber que disfrutaste la
+                    vista al mar y nuestro servicio. ¡Esperamos recibirte nuevamente pronto!
+                </p>
+
+            </div>
+
+            <!-- CONTROLES ADMIN -->
+
+            <div class="AdminActions">
+
+                <button class="BtnResponder">Editar</button>
+                <button class="BtnAprobar">Aprobar</button>
+                <button class="BtnSpam">Spam</button>
+                <button class="BtnEliminar">Eliminar</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Dyban -->
+
+        <div class="TarjetaComentario AdminComentario">
+
+            <div class="EstadoComentario EstadoAprovado">
+                Aprobado
+            </div>
+
+            <div class="ComentarioHeaderTarjeta">
+
+                <div class="UsuarioInfo">
+                    <div class="Avatar">D</div>
+
+                    <div>
+                        <h3>Dyban León</h3>
+                        <span class="Lugar">Guanacaste</span>
+                    </div>
+
+                </div>
+
+                <div class="EstrellasComentario">
+                    ★★★★☆
+                </div>
+
+            </div>
+
+            <p>
+                Me encantó la vista al mar en Guanacaste. Muy buena atención del personal.
+            </p>
+
+            <div class="RespuestaHotel">
+
+                <div class="AdminInfo">
+                    <div class="AvatarAdmin">H</div>
+                    <strong>Hotel Coral</strong>
+                </div>
+
+                <p>
+                    Gracias por compartir tu experiencia Dyban. Nos alegra saber que disfrutaste
+                    tu estancia en Guanacaste. ¡Te esperamos nuevamente!
+                </p>
+
+            </div>
+
+            <div class="AdminActions">
+
+                <button class="BtnResponder">Editar</button>
+                <button class="BtnAprobar">Aprobar</button>
+                <button class="BtnSpam">Spam</button>
+                <button class="BtnEliminar">Eliminar</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Alessandra -->
+
+        <div class="TarjetaComentario AdminComentario">
+
+            <div class="EstadoComentario EstadoPendiente">
+                Pendiente
+            </div>
+
+            <div class="ComentarioHeaderTarjeta">
+
+                <div class="UsuarioInfo">
+                    <div class="Avatar">A</div>
+
+                    <div>
+                        <h3>Alessandra Meza</h3>
+                        <span class="Lugar">Limón</span>
+                    </div>
+
+                </div>
+
+                <div class="EstrellasComentario">
+                    ★★★☆☆
+                </div>
+
+            </div>
+
+            <p>
+                El hotel en Limón es hermoso, muy cerca de la playa y el personal es muy amable.
+            </p>
+
+
+            <!-- RESPONDER ADMIN -->
+
+            <textarea class="AdminTextarea" placeholder="Responder comentario..."></textarea>
+
+            <div class="AdminActions">
+
+                <button class="BtnResponder">Publicar respuesta</button>
+                <button class="BtnAprobar">Aprobar</button>
+                <button class="BtnSpam">Spam</button>
+                <button class="BtnEliminar">Eliminar</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer id="FragmentoFooter"></footer>
+
+    <script src="js/CargarFragmento.js"></script>
+    <script src="js/Header.js"></script>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-/* RESET */
+/* Reset */
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ img {
 }
 
 
-/* BODY */
+/* Body */
 
 body {
     background: linear-gradient(to bottom, #e6f4f3, #ffffff);
@@ -20,7 +20,7 @@ body {
 }
 
 
-/* TÍTULO PRINCIPAL */
+/* Titulo */
 
 .TituloReservas {
     font-family: 'Zain', sans-serif;
@@ -31,7 +31,7 @@ body {
 }
 
 
-/* SECCIÓN PRINCIPAL */
+/* Secciones */
 
 .ReservaSection {
     width: 90%;
@@ -44,8 +44,6 @@ body {
 }
 
 
-/* CONTENEDOR FORMULARIO + IMAGEN */
-
 .ReservaContainer {
     display: flex;
     gap: 50px;
@@ -53,7 +51,7 @@ body {
 }
 
 
-/* FORMULARIO */
+/* Formulario */
 
 .FormularioLado {
     flex: 1;
@@ -66,7 +64,7 @@ body {
 }
 
 
-/* CAMPOS */
+/* Campos */
 
 .Campo {
     display: flex;
@@ -80,7 +78,7 @@ label {
 }
 
 
-/* INPUTS */
+/* Inputs */
 
 input,
 select,
@@ -98,14 +96,10 @@ textarea {
 }
 
 
-/* PLACEHOLDER */
-
 ::placeholder {
     color: #999;
 }
 
-
-/* INPUT FOCUS */
 
 input:focus,
 select:focus,
@@ -116,7 +110,7 @@ textarea:focus {
 }
 
 
-/* BOTÓN */
+/* Boton */
 
 button {
     width: 100%;
@@ -135,7 +129,7 @@ button:hover {
 }
 
 
-/* IMAGEN LADO DERECHO */
+/* Imagen */
 
 .ImagenReserva {
     flex: 1;
@@ -149,8 +143,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-
-/* INFO HABITACIÓN */
+/* Info */
 
 .InfoHabitacion {
     display: flex;
@@ -159,15 +152,13 @@ button:hover {
 }
 
 
-/* TÍTULO HABITACIÓN */
-
 .TituloHabitacion {
     font-family: 'Zain', sans-serif;
     font-size: 26px;
 }
 
 
-/* PRECIO */
+/* Precio */
 
 .PrecioHabitacion {
     color: #1c6b73;
@@ -183,7 +174,7 @@ button:hover {
 }
 
 
-/* SERVICIOS */
+/* Servicios */
 
 .ServiciosHabitacion h4 {
     font-size: 16px;
@@ -200,7 +191,7 @@ button:hover {
 }
 
 
-/* DESCRIPCIÓN */
+/* Descripción */
 
 .DescripcionHabitacion h4 {
     font-size: 16px;
@@ -213,15 +204,13 @@ button:hover {
     color: #555;
 }
 
-/* CONTENEDOR IMAGEN */
+/* Imagen contenedor */
 
 .ImagenWrapper {
     position: relative;
     margin-bottom: 20px;
 }
 
-
-/* IMAGEN */
 
 .ImagenWrapper img {
     width: 100%;
@@ -231,24 +220,19 @@ button:hover {
 }
 
 
-/* ETIQUETA PRECIO */
+/* Etiqueta Precio */
 
 .PrecioEtiqueta {
 
     position: absolute;
     top: 15px;
     right: 15px;
-
     background: #1c6b73;
     color: white;
-
     padding: 8px 14px;
-
     border-radius: 20px;
-
     font-size: 14px;
     font-weight: bold;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
 }
@@ -263,7 +247,7 @@ button:hover {
 }
 
 
-/* ICONOS SERVICIOS */
+/* Iconos */
 
 .ServiciosHabitacion ul {
     list-style: none;
@@ -279,8 +263,6 @@ button:hover {
     gap: 8px;
 }
 
-
-/* ICONOS */
 
 .wifi::before {
     content: "📶";
@@ -302,17 +284,14 @@ button:hover {
     content: "🚿";
 }
 
-/* RESUMEN RESERVA */
+/* Resumen */
 
 .ResumenReserva{
 
 margin-top:25px;
 padding:20px;
-
 background:#f7fbfb;
-
 border-radius:12px;
-
 border:1px solid #e5f1f0;
 
 }
@@ -325,33 +304,25 @@ margin-bottom:12px;
 
 }
 
-/* LINEAS */
 
 .LineaResumen{
 
 display:flex;
 justify-content:space-between;
-
 font-size:14px;
-
 margin-bottom:6px;
 
 }
 
-/* TOTAL */
+/* Total */
 
 .LineaResumen.total{
 
 margin-top:10px;
-
 padding-top:10px;
-
 border-top:1px solid #ddd;
-
 font-weight:bold;
-
 font-size:16px;
-
 color:#1c6b73;
 
 }
