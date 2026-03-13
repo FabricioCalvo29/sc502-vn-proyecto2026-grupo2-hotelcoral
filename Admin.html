@@ -5,27 +5,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Coral | Admin</title>
+
     <link rel="stylesheet" href="css/HeaderStyle.css">
     <link rel="stylesheet" href="css/FooterStyle.css">
     <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/Admin.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Zain:wght@400;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700;800&family=Chiron+GoRound+TC:wght@400;500;700&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header id="FragmentoHeader"></header>
 
-    <main>
-        <h1>Contenido de Admin</h1>
+    <main class="SeccionAdmin">
+        <div class="ContenedorAdmin">
+            <section class="EncabezadoAdmin">
+                <h1 class="TituloAdmin">Gestión de Usuarios</h1>
+                <p class="TextoAdmin">
+                    Administra la información de los usuarios registrados, edita sus datos básicos
+                    y mantén un control visual simple de la sección administrativa del sistema.
+                </p>
+            </section>
+
+            <section class="GridAdmin">
+                <article class="TarjetaAdmin">
+                    <h2 class="TituloTarjeta">Agregar o editar usuario</h2>
+                    <p class="DescripcionTarjeta">
+                        Completa el formulario para registrar un nuevo usuario o modificar la información
+                        de un usuario existente.
+                    </p>
+
+                    <form class="FormularioAdmin">
+                        <div class="FilaDoble">
+                            <div class="GrupoCampo">
+                                <label for="NombreUsuario">Nombre</label>
+                                <input type="text" id="NombreUsuario" placeholder="Nombre del usuario">
+                            </div>
+
+                            <div class="GrupoCampo">
+                                <label for="ApellidoUsuario">Apellido</label>
+                                <input type="text" id="ApellidoUsuario" placeholder="Apellido del usuario">
+                            </div>
+                        </div>
+
+                        <div class="GrupoCampo">
+                            <label for="CorreoUsuario">Correo electrónico</label>
+                            <input type="email" id="CorreoUsuario" placeholder="usuario@email.com">
+                        </div>
+
+                        <div class="FilaDoble">
+                            <div class="GrupoCampo">
+                                <label for="TelefonoUsuario">Teléfono</label>
+                                <input type="tel" id="TelefonoUsuario" placeholder="8888-8888">
+                            </div>
+
+                            <div class="GrupoCampo">
+                                <label for="RolUsuario">Rol del usuario</label>
+                                <select id="RolUsuario">
+                                    <option value="">Seleccione un rol</option>
+                                    <option value="cliente">Cliente</option>
+                                    <option value="admin">Administrador</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="FilaBotones">
+                            <button type="submit" class="BotonPrincipal">Guardar usuario</button>
+                            <button type="reset" class="BotonSecundario">Limpiar formulario</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="TarjetaAdmin">
+                    <h2 class="TituloTarjeta">Usuarios registrados</h2>
+                    <p class="DescripcionTarjeta">
+                        Vista general de usuarios registrados con acciones rápidas para editar o eliminar.
+                    </p>
+
+                    <div class="ContenedorTabla">
+                        <table class="TablaUsuarios">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Teléfono</th>
+                                    <th>Rol</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="NombreUsuario">Ronald Salas</td>
+                                    <td>Ronald@email.com</td>
+                                    <td>8888-1111</td>
+                                    <td><span class="EtiquetaRol RolCliente">Cliente</span></td>
+                                    <td>
+                                        <div class="FilaAcciones">
+                                            <button class="BotonEditar" type="button">Editar</button>
+                                            <button class="BotonEliminar" type="button">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="NombreUsuario">keylin Alvarez</td>
+                                    <td>Keylin@email.com</td>
+                                    <td>8777-2222</td>
+                                    <td><span class="EtiquetaRol RolAdmin">Administrador</span></td>
+                                    <td>
+                                        <div class="FilaAcciones">
+                                            <button class="BotonEditar" type="button">Editar</button>
+                                            <button class="BotonEliminar" type="button">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="NombreUsuario">María Montoya</td>
+                                    <td>Maria@email.com</td>
+                                    <td>8666-3333</td>
+                                    <td><span class="EtiquetaRol RolCliente">Cliente</span></td>
+                                    <td>
+                                        <div class="FilaAcciones">
+                                            <button class="BotonEditar" type="button">Editar</button>
+                                            <button class="BotonEliminar" type="button">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="NombreUsuario">Melody Segura</td>
+                                    <td>Melody@email.com</td>
+                                    <td>8555-4444</td>
+                                    <td><span class="EtiquetaRol RolCliente">Cliente</span></td>
+                                    <td>
+                                        <div class="FilaAcciones">
+                                            <button class="BotonEditar" type="button">Editar</button>
+                                            <button class="BotonEliminar" type="button">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer id="FragmentoFooter"></footer>
-
 
     <script src="js/CargarFragmento.js"></script>
     <script src="js/Header.js"></script>

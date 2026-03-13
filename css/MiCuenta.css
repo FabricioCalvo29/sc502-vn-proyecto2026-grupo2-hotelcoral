@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    background: linear-gradient(to bottom, #eaf5f4 0%, #f8fbfb 45%, #ffffff 100%);
+    color: #243238;
+}
+
+.SeccionMiCuenta {
+    width: 100%;
+    padding: 40px 0 70px;
+}
+
+.TituloMiCuenta {
+    font-family: "Zain", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+    color: #243238;
+    line-height: 1;
+}
+
+.IntroMiCuenta {
+    width: 90%;
+    max-width: 760px;
+    margin: 18px auto 30px;
+    text-align: center;
+}
+
+.SubtituloMiCuenta {
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 18px;
+    color: #4f5d61;
+    line-height: 1.7;
+}
+
+.ContenedorMiCuenta {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.TarjetaCuenta {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(28, 107, 115, 0.08);
+}
+
+.TituloTarjeta {
+    font-family: "Zain", sans-serif;
+    font-size: 32px;
+    color: #1c6b73;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.TextoTarjeta {
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #5c6a6e;
+    margin-bottom: 24px;
+}
+
+.FormularioCuenta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.FilaDoble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.Campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.Campo label {
+    margin-bottom: 6px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #243238;
+}
+
+.Campo input {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 10px;
+    border: 1px solid #cfd8d7;
+    font-size: 14px;
+    font-family: "Quicksand", sans-serif;
+    background: #ffffff;
+    transition: 0.25s ease;
+}
+
+.Campo input::placeholder {
+    color: #9aa4a6;
+}
+
+.Campo input:focus {
+    outline: none;
+    border: 1px solid #1c6b73;
+    box-shadow: 0 0 5px rgba(28, 107, 115, 0.25);
+}
+
+.BotonCuenta {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #1c6b73;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 4px;
+}
+
+.BotonCuenta:hover {
+    background: #14545a;
+}
+
+.TextoExtra {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6b6b6b;
+    font-family: "Quicksand", sans-serif;
+}
+
+.TextoExtra a {
+    color: #1c6b73;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.TextoExtra a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .ContenedorMiCuenta {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .TituloMiCuenta {
+        font-size: 34px;
+    }
+
+    .SubtituloMiCuenta {
+        font-size: 16px;
+    }
+
+    .TarjetaCuenta {
+        padding: 24px 20px;
+    }
+
+    .FilaDoble {
+        grid-template-columns: 1fr;
+    }
+
+    .TituloTarjeta {
+        font-size: 28px;
+    }
+}

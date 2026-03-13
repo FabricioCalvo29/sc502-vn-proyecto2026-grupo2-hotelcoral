@@ -5,27 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Coral | Correo</title>
+
     <link rel="stylesheet" href="css/HeaderStyle.css">
     <link rel="stylesheet" href="css/FooterStyle.css">
     <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/Correo.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Zain:wght@400;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700;800&family=Chiron+GoRound+TC:wght@400;500;700&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header id="FragmentoHeader"></header>
 
-    <main>
-        <h1>Contenido de Correo</h1>
+    <main class="SeccionCorreo">
+        <div class="ContenedorCorreo">
+
+            <section class="EncabezadoCorreo">
+                <h1 class="TituloCorreo">Contacto por Correo</h1>
+                <p class="TextoCorreo">
+                    Escríbenos para consultas generales, apoyo con reservas, solicitudes especiales
+                    o información adicional sobre nuestros hoteles y servicios.
+                </p>
+            </section>
+
+            <section class="GridCorreo">
+                <article class="TarjetaCorreo">
+                    <h2 class="TituloTarjetaCorreo">Correos disponibles</h2>
+                    <p class="DescripcionTarjetaCorreo">
+                        Puedes comunicarte con nuestro equipo según el tipo de consulta que necesites realizar.
+                    </p>
+
+                    <div class="ListaCorreos">
+                        <div class="ItemCorreo">
+                            <div class="IconoCorreo">R</div>
+                            <div class="ContenidoCorreo">
+                                <h3>Reservas</h3>
+                                <p>Consultas sobre disponibilidad, cambios de fechas, habitaciones y cotizaciones.</p>
+                                <a class="EnlaceCorreo" href="mailto:reservas@hotelcoral.com">reservas@hotelcoral.com</a>
+                            </div>
+                        </div>
+
+                        <div class="ItemCorreo">
+                            <div class="IconoCorreo">A</div>
+                            <div class="ContenidoCorreo">
+                                <h3>Atención al cliente</h3>
+                                <p>Soporte para huéspedes, dudas generales y seguimiento de solicitudes.</p>
+                                <a class="EnlaceCorreo" href="mailto:atencion@hotelcoral.com">atencion@hotelcoral.com</a>
+                            </div>
+                        </div>
+
+                        <div class="ItemCorreo">
+                            <div class="IconoCorreo">E</div>
+                            <div class="ContenidoCorreo">
+                                <h3>Eventos y servicios</h3>
+                                <p>Información relacionada con actividades, eventos especiales y servicios adicionales.</p>
+                                <a class="EnlaceCorreo" href="mailto:eventos@hotelcoral.com">eventos@hotelcoral.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="CajaInfoCorreo">
+                        <p>
+                            El tiempo de respuesta estimado es de 24 a 48 horas hábiles, según el tipo de solicitud.
+                        </p>
+                    </div>
+                </article>
+
+                <aside class="TarjetaCorreo">
+                    <h2 class="TituloTarjetaCorreo">Envíanos un mensaje</h2>
+                    <p class="DescripcionTarjetaCorreo">
+                        Completa el siguiente formulario para ponerte en contacto con Hotel Coral.
+                    </p>
+
+                    <form class="FormularioCorreo" action="#" method="post">
+                        <div class="GrupoCampoCorreo">
+                            <label for="NombreCorreo">Nombre completo</label>
+                            <input type="text" id="NombreCorreo" name="NombreCorreo" placeholder="Tu nombre completo">
+                        </div>
+
+                        <div class="GrupoCampoCorreo">
+                            <label for="CorreoUsuario">Correo electrónico</label>
+                            <input type="email" id="CorreoUsuario" name="CorreoUsuario" placeholder="ejemplo@email.com">
+                        </div>
+
+                        <div class="GrupoCampoCorreo">
+                            <label for="AsuntoCorreo">Asunto</label>
+                            <select id="AsuntoCorreo" name="AsuntoCorreo">
+                                <option value="">Seleccione una opción</option>
+                                <option value="reservas">Reservas</option>
+                                <option value="informacion">Información general</option>
+                                <option value="eventos">Eventos y servicios</option>
+                                <option value="soporte">Soporte</option>
+                            </select>
+                        </div>
+
+                        <div class="GrupoCampoCorreo">
+                            <label for="MensajeCorreo">Mensaje</label>
+                            <textarea id="MensajeCorreo" name="MensajeCorreo"
+                                placeholder="Escribe aquí tu consulta o solicitud"></textarea>
+                        </div>
+
+                        <button type="submit" class="BotonEnviarCorreo">Enviar mensaje</button>
+                    </form>
+                </aside>
+            </section>
+
+        </div>
     </main>
 
     <footer id="FragmentoFooter"></footer>
-
 
     <script src="js/CargarFragmento.js"></script>
     <script src="js/Header.js"></script>

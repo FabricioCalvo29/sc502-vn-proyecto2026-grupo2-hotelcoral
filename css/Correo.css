@@ -1,0 +1,323 @@
+:root {
+    --OceanDeep: #1c6b73;
+    --SeaTurquoise: #49b7b1;
+    --LagoonLight: #7fd6cf;
+    --SoftCream: #f8fbfb;
+    --CardBackground: #ffffff;
+    --TextDark: #243238;
+    --TextSoft: #4f5d61;
+    --TextMuted: #5c6a6e;
+    --BorderSoft: rgba(28, 107, 115, 0.10);
+    --BorderLight: #e6eceb;
+    --ShadowSoft: rgba(24, 49, 56, 0.08);
+    --AccentWarm: #d97b5d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    color: var(--TextDark);
+    font-family: "Chiron GoRound TC", sans-serif;
+    background: linear-gradient(to bottom, #eaf5f4 0%, #f8fbfb 45%, #ffffff 100%);
+}
+
+.SeccionCorreo {
+    width: 100%;
+    min-height: calc(100vh - 170px);
+    padding: 64px 24px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ContenedorCorreo {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.EncabezadoCorreo {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.TituloCorreo {
+    margin: 0 0 14px;
+    font-family: "Zain", sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--TextDark);
+}
+
+.TextoCorreo {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--TextSoft);
+}
+
+.GridCorreo {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.TarjetaCorreo {
+    background-color: var(--CardBackground);
+    border: 1px solid var(--BorderSoft);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--ShadowSoft);
+    padding: 34px;
+}
+
+.TituloTarjetaCorreo {
+    margin: 0 0 12px;
+    font-family: "Zain", sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--OceanDeep);
+}
+
+.DescripcionTarjetaCorreo {
+    margin: 0 0 24px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--TextMuted);
+}
+
+.ListaCorreos {
+    display: grid;
+    gap: 16px;
+}
+
+.ItemCorreo {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px;
+    border: 1px solid var(--BorderLight);
+    border-radius: 14px;
+    background-color: #fcfcfc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ItemCorreo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(24, 49, 56, 0.06);
+}
+
+.IconoCorreo {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.ContenidoCorreo h3 {
+    margin: 0 0 4px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--TextDark);
+}
+
+.ContenidoCorreo p {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    line-height: 1.7;
+    color: #576367;
+}
+
+.EnlaceCorreo {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    color: var(--AccentWarm);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.EnlaceCorreo:hover {
+    color: var(--OceanDeep);
+    text-decoration: underline;
+}
+
+.FormularioCorreo {
+    display: grid;
+    gap: 16px;
+}
+
+.GrupoCampoCorreo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.GrupoCampoCorreo label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--TextDark);
+}
+
+.GrupoCampoCorreo input,
+.GrupoCampoCorreo textarea,
+.GrupoCampoCorreo select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    color: var(--TextDark);
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.GrupoCampoCorreo input::placeholder,
+.GrupoCampoCorreo textarea::placeholder {
+    color: #97a3a6;
+    font-family: "Quicksand", sans-serif;
+}
+
+.GrupoCampoCorreo input:focus,
+.GrupoCampoCorreo textarea:focus,
+.GrupoCampoCorreo select:focus {
+    border-color: var(--SeaTurquoise);
+    box-shadow: 0 0 0 4px rgba(73, 183, 177, 0.12);
+}
+
+.GrupoCampoCorreo textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.BotonEnviarCorreo {
+    width: 100%;
+    margin-top: 6px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--OceanDeep);
+    color: #ffffff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.BotonEnviarCorreo:hover {
+    background-color: #14545a;
+    box-shadow: 0 8px 18px rgba(20, 84, 90, 0.18);
+    transform: translateY(-1px);
+}
+
+.CajaInfoCorreo {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 14px;
+    background-color: rgba(127, 214, 207, 0.12);
+    border: 1px solid rgba(73, 183, 177, 0.18);
+}
+
+.CajaInfoCorreo p {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    line-height: 1.7;
+    color: #526164;
+}
+
+@media (max-width: 1024px) {
+    .SeccionCorreo {
+        padding: 56px 22px 80px;
+    }
+
+    .GridCorreo {
+        gap: 24px;
+    }
+
+    .TarjetaCorreo {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .SeccionCorreo {
+        min-height: auto;
+        padding: 48px 20px 72px;
+    }
+
+    .EncabezadoCorreo {
+        margin-bottom: 32px;
+    }
+
+    .GridCorreo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .SeccionCorreo {
+        padding: 40px 16px 64px;
+    }
+
+    .TituloCorreo {
+        font-size: 34px;
+    }
+
+    .TextoCorreo {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .TarjetaCorreo {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .TituloTarjetaCorreo {
+        font-size: 28px;
+    }
+
+    .DescripcionTarjetaCorreo {
+        font-size: 14px;
+    }
+
+    .ItemCorreo {
+        padding: 15px;
+    }
+
+    .GrupoCampoCorreo input,
+    .GrupoCampoCorreo textarea,
+    .GrupoCampoCorreo select {
+        padding: 13px 12px;
+        font-size: 0.95rem;
+    }
+
+    .BotonEnviarCorreo {
+        padding: 13px;
+        font-size: 15px;
+    }
+}

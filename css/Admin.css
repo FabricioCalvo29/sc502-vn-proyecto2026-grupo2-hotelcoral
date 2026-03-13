@@ -1,0 +1,315 @@
+:root {
+    --OceanDeep: #1c6b73;
+    --SeaTurquoise: #49b7b1;
+    --LagoonLight: #7fd6cf;
+    --SoftCream: #f8fbfb;
+    --CardBackground: #ffffff;
+    --TextDark: #243238;
+    --TextSoft: #4f5d61;
+    --TextMuted: #5c6a6e;
+    --BorderSoft: rgba(28, 107, 115, 0.10);
+    --BorderLight: #e6eceb;
+    --ShadowSoft: rgba(24, 49, 56, 0.08);
+    --DangerSoft: #fce9e3;
+    --DangerText: #b85c42;
+    --SuccessSoft: #eaf6ea;
+    --SuccessText: #567a49;
+    --TableHead: #f8fbfb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    color: var(--TextDark);
+    font-family: "Chiron GoRound TC", sans-serif;
+    background: linear-gradient(to bottom, #eaf5f4 0%, #f8fbfb 45%, #ffffff 100%);
+}
+
+.SeccionAdmin {
+    width: 100%;
+    min-height: calc(100vh - 170px);
+    padding: 80px 24px 90px;
+}
+
+.ContenedorAdmin {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.EncabezadoAdmin {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.TituloAdmin {
+    margin: 0 0 14px;
+    font-family: "Zain", sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--TextDark);
+}
+
+.TextoAdmin {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--TextSoft);
+}
+
+.GridAdmin {
+    display: grid;
+    grid-template-columns: 0.95fr 1.25fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.TarjetaAdmin {
+    background-color: var(--CardBackground);
+    border: 1px solid var(--BorderSoft);
+    border-radius: 20px;
+    box-shadow: 0 10px 24px var(--ShadowSoft);
+    padding: 30px;
+}
+
+.TituloTarjeta {
+    margin: 0 0 10px;
+    font-family: "Zain", sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--OceanDeep);
+}
+
+.DescripcionTarjeta {
+    margin: 0 0 24px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--TextMuted);
+}
+
+.FormularioAdmin {
+    display: grid;
+    gap: 16px;
+}
+
+.FilaDoble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.GrupoCampo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.GrupoCampo label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--TextDark);
+}
+
+.GrupoCampo input,
+.GrupoCampo select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    color: var(--TextDark);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.GrupoCampo input::placeholder {
+    color: #97a3a6;
+    font-family: "Quicksand", sans-serif;
+}
+
+.GrupoCampo input:focus,
+.GrupoCampo select:focus {
+    border-color: var(--SeaTurquoise);
+    box-shadow: 0 0 0 4px rgba(73, 183, 177, 0.12);
+}
+
+.FilaBotones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.BotonPrincipal,
+.BotonSecundario,
+.BotonEditar,
+.BotonEliminar {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.BotonPrincipal {
+    background-color: var(--OceanDeep);
+    color: #ffffff;
+}
+
+.BotonPrincipal:hover {
+    background-color: #14545a;
+}
+
+.BotonSecundario {
+    background-color: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+}
+
+.BotonSecundario:hover {
+    background-color: rgba(73, 183, 177, 0.24);
+}
+
+.ContenedorTabla {
+    overflow-x: auto;
+}
+
+.TablaUsuarios {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.TablaUsuarios thead th {
+    text-align: left;
+    padding: 14px 12px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--OceanDeep);
+    border-bottom: 2px solid #e7eeed;
+    background-color: var(--TableHead);
+}
+
+.TablaUsuarios tbody td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #ececec;
+    font-family: "Chiron GoRound TC", sans-serif;
+    color: var(--TextSoft);
+    vertical-align: middle;
+}
+
+.NombreUsuario {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    color: var(--TextDark);
+}
+
+.EtiquetaRol {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.RolCliente {
+    background-color: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+}
+
+.RolAdmin {
+    background-color: var(--SuccessSoft);
+    color: var(--SuccessText);
+}
+
+.FilaAcciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.BotonEditar {
+    background-color: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+}
+
+.BotonEditar:hover {
+    background-color: rgba(73, 183, 177, 0.24);
+}
+
+.BotonEliminar {
+    background-color: var(--DangerSoft);
+    color: var(--DangerText);
+}
+
+.BotonEliminar:hover {
+    background-color: #f8ddd5;
+}
+
+@media (max-width: 980px) {
+    .SeccionAdmin {
+        padding: 68px 22px 80px;
+    }
+
+    .GridAdmin {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .SeccionAdmin {
+        padding: 56px 16px 64px;
+    }
+
+    .TituloAdmin {
+        font-size: 34px;
+    }
+
+    .TextoAdmin {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .TarjetaAdmin {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .FilaDoble {
+        grid-template-columns: 1fr;
+    }
+
+    .TituloTarjeta {
+        font-size: 28px;
+    }
+
+    .DescripcionTarjeta {
+        font-size: 14px;
+    }
+
+    .FilaBotones {
+        flex-direction: column;
+    }
+
+    .BotonPrincipal,
+    .BotonSecundario {
+        width: 100%;
+    }
+}
