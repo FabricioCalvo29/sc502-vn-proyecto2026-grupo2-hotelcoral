@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Coral | Administración de usuarios</title>
+
+    <link rel="stylesheet" href="css/HeaderStyle.css">
+    <link rel="stylesheet" href="css/FooterStyle.css">
+    <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/Admin.css">
+    <link rel="stylesheet" href="css/AdminUsuarios.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700;800&family=Chiron+GoRound+TC:wght@400;500;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="FragmentoHeader"></header>
+
+    <main class="SeccionAdmin">
+        <div class="ContenedorAdmin">
+            <section class="EncabezadoAdmin">
+                <h1 class="TituloAdmin">Administración de usuarios</h1>
+                <p class="TextoAdmin">
+                    Gestiona los usuarios registrados del sistema Hotel Coral desde un único módulo.
+                </p>
+            </section>
+
+            <div id="MensajeAdminUsuarios" class="MensajeFormulario" aria-live="polite"></div>
+
+            <section class="GridAdmin">
+                <article class="TarjetaAdmin">
+                    <div class="EncabezadoTarjetaAdmin">
+                        <div>
+                            <h2 class="TituloTarjeta" id="TituloFormularioUsuarios">Crear usuario</h2>
+                            <p class="DescripcionTarjeta" id="TextoModoFormulario">
+                                Completa el formulario para registrar un nuevo usuario.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form class="FormularioAdmin" id="FormularioAdminUsuarios" novalidate>
+                        <input type="hidden" id="InputIdUsuario" name="ID_USUARIO">
+
+                        <div class="FilaDoble">
+                            <div class="GrupoCampo">
+                                <label for="InputNombreUsuario">Nombre</label>
+                                <input type="text" id="InputNombreUsuario" name="Nombre"
+                                    placeholder="Nombre del usuario" required>
+                            </div>
+
+                            <div class="GrupoCampo">
+                                <label for="InputApellidoUsuario">Apellido</label>
+                                <input type="text" id="InputApellidoUsuario" name="Apellido"
+                                    placeholder="Apellido del usuario" required>
+                            </div>
+                        </div>
+
+                        <div class="GrupoCampo">
+                            <label for="InputCorreoUsuario">Correo electrónico</label>
+                            <input type="email" id="InputCorreoUsuario" name="Correo" placeholder="usuario@email.com"
+                                required>
+                        </div>
+
+                        <div class="FilaDoble">
+                            <div class="GrupoCampo">
+                                <label for="InputTelefonoUsuario">Teléfono</label>
+                                <input type="tel" id="InputTelefonoUsuario" name="Telefono" placeholder="8888-8888">
+                            </div>
+
+                            <div class="GrupoCampo">
+                                <label for="SelectRolUsuario">Rol</label>
+                                <select id="SelectRolUsuario" name="Rol" required>
+                                    <option value="">Seleccione un rol</option>
+                                    <option value="CLIENTE">CLIENTE</option>
+                                    <option value="ADMIN">ADMIN</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="GrupoCampo">
+                            <label for="SelectEstadoUsuario">Estado</label>
+                            <select id="SelectEstadoUsuario" name="EstadoUsuario" required>
+                                <option value="">Seleccione un estado</option>
+                                <option value="ACTIVO">ACTIVO</option>
+                                <option value="INACTIVO">INACTIVO</option>
+                                <option value="BLOQUEADO">BLOQUEADO</option>
+                            </select>
+                        </div>
+
+                        <div class="FilaDoble">
+                            <div class="GrupoCampo">
+                                <label for="InputContrasenaUsuario">Contraseña</label>
+                                <input type="password" id="InputContrasenaUsuario" name="Contrasena"
+                                    placeholder="Escribe una contraseña">
+                            </div>
+
+                            <div class="GrupoCampo">
+                                <label for="InputConfirmarContrasenaUsuario">Confirmar contraseña</label>
+                                <input type="password" id="InputConfirmarContrasenaUsuario" name="ConfirmarContrasena"
+                                    placeholder="Repite la contraseña">
+                            </div>
+                        </div>
+
+                        <p class="DescripcionTarjeta" id="TextoAyudaContrasena">
+                            En modo edición, si dejas la contraseña vacía, se conservará la actual.
+                        </p>
+
+                        <div class="FilaBotones">
+                            <button type="submit" class="BotonPrincipal" id="BotonGuardarUsuario">
+                                Guardar usuario
+                            </button>
+                            <button type="button" class="BotonSecundario" id="BotonCancelarEdicion">
+                                Cancelar edición
+                            </button>
+                            <button type="reset" class="BotonSecundario" id="BotonLimpiarFormulario">
+                                Limpiar formulario
+                            </button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="TarjetaAdmin">
+                    <h2 class="TituloTarjeta">Usuarios registrados</h2>
+                    <p class="DescripcionTarjeta">
+                        Consulta el listado real de usuarios y utiliza las acciones para editar o cambiar estado.
+                    </p>
+
+                    <div class="FilaDoble">
+                        <div class="GrupoCampo">
+                            <label for="InputBuscarUsuario">Buscar</label>
+                            <input type="text" id="InputBuscarUsuario" placeholder="Nombre o correo">
+                        </div>
+
+                        <div class="GrupoCampo">
+                            <label for="SelectFiltroRol">Filtrar por rol</label>
+                            <select id="SelectFiltroRol">
+                                <option value="">Todos</option>
+                                <option value="CLIENTE">CLIENTE</option>
+                                <option value="ADMIN">ADMIN</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="ContenedorTabla">
+                        <table class="TablaUsuarios">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Teléfono</th>
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                    <th>Fecha de registro</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="CuerpoTablaUsuarios">
+                                <tr>
+                                    <td colspan="7">Cargando usuarios...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer id="FragmentoFooter"></footer>
+
+    <script src="js/CargarFragmento.js"></script>
+    <script src="js/Header.js"></script>
+    <script src="js/Admin/AdminUsuarios.js"></script>
+</body>
+
+</html>

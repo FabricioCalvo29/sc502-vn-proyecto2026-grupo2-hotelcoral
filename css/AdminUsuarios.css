@@ -1,0 +1,309 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(180deg, rgba(245, 239, 230, 0.94), rgba(217, 195, 163, 0.16)),
+        var(--SoftCream);
+    color: var(--TextDark);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+.SeccionAdmin {
+    width: 100%;
+    padding: clamp(30px, 5vw, 68px) 20px 88px;
+}
+
+.ContenedorAdmin {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.EncabezadoAdmin {
+    max-width: 800px;
+    margin-bottom: 28px;
+}
+
+.TituloAdmin {
+    margin: 0 0 10px;
+    font-family: "Zain", sans-serif;
+    font-size: clamp(2.7rem, 5vw, 4rem);
+    line-height: 0.95;
+    color: var(--OceanDeep);
+}
+
+.TextoAdmin {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 1.04rem;
+    line-height: 1.75;
+    color: var(--TextDark);
+    opacity: 0.9;
+}
+
+.MensajeFormulario {
+    display: none;
+    margin-bottom: 18px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.GridAdmin {
+    display: grid;
+    grid-template-columns: minmax(320px, 430px) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.TarjetaAdmin {
+    padding: 26px 24px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(44, 110, 127, 0.10);
+    box-shadow: 0 16px 34px rgba(36, 50, 56, 0.08);
+}
+
+.EncabezadoTarjetaAdmin {
+    margin-bottom: 16px;
+}
+
+.TituloTarjeta {
+    margin: 0 0 10px;
+    font-family: "Zain", sans-serif;
+    font-size: 1.95rem;
+    line-height: 1;
+    color: var(--OceanDeep);
+}
+
+.DescripcionTarjeta {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--TextDark);
+    opacity: 0.9;
+}
+
+.FormularioAdmin {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.FilaDoble {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.GrupoCampo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.GrupoCampo label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: var(--TextDark);
+}
+
+.GrupoCampo input,
+.GrupoCampo select,
+.GrupoCampo textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    border: 1px solid rgba(156, 126, 94, 0.24);
+    background: rgba(255, 255, 255, 0.96);
+    color: var(--TextDark);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.96rem;
+    transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+}
+
+.GrupoCampo input::placeholder,
+.GrupoCampo textarea::placeholder {
+    color: rgba(36, 50, 56, 0.56);
+}
+
+.GrupoCampo input:focus,
+.GrupoCampo select:focus,
+.GrupoCampo textarea:focus {
+    outline: none;
+    border-color: var(--SeaTurquoise);
+    box-shadow: 0 0 0 4px rgba(73, 183, 177, 0.16);
+    transform: translateY(-1px);
+}
+
+.FilaBotones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.BotonPrincipal,
+.BotonSecundario,
+.BotonEditar {
+    appearance: none;
+    border: none;
+    border-radius: 14px;
+    min-height: 46px;
+    padding: 11px 16px;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.93rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+}
+
+.BotonPrincipal {
+    background: linear-gradient(135deg, var(--OceanDeep), #317f94);
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(44, 110, 127, 0.18);
+}
+
+.BotonPrincipal:hover {
+    transform: translateY(-2px);
+}
+
+.BotonSecundario {
+    background: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+    border: 1px solid rgba(44, 110, 127, 0.12);
+}
+
+.BotonSecundario:hover {
+    transform: translateY(-2px);
+    background: rgba(73, 183, 177, 0.20);
+}
+
+.BotonEditar {
+    background: rgba(217, 123, 93, 0.14);
+    color: var(--CoralAccent);
+    border: 1px solid rgba(217, 123, 93, 0.18);
+}
+
+.BotonEditar:hover {
+    transform: translateY(-2px);
+    background: rgba(217, 123, 93, 0.20);
+}
+
+#BotonCancelarEdicion {
+    display: none;
+}
+
+.ContenedorTabla {
+    margin-top: 18px;
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 1px solid rgba(44, 110, 127, 0.10);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.TablaUsuarios {
+    width: 100%;
+    min-width: 820px;
+    border-collapse: collapse;
+    font-family: "Quicksand", sans-serif;
+}
+
+.TablaUsuarios thead th {
+    padding: 14px 16px;
+    background: rgba(127, 214, 207, 0.12);
+    color: var(--OceanDeep);
+    text-align: left;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(44, 110, 127, 0.10);
+}
+
+.TablaUsuarios tbody td {
+    padding: 14px 16px;
+    font-size: 0.93rem;
+    color: var(--TextDark);
+    border-bottom: 1px solid rgba(44, 110, 127, 0.08);
+    vertical-align: middle;
+}
+
+.TablaUsuarios tbody tr:hover {
+    background: rgba(245, 239, 230, 0.58);
+}
+
+.NombreUsuario {
+    font-weight: 700;
+}
+
+.EtiquetaRol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.RolAdmin {
+    background: rgba(217, 123, 93, 0.14);
+    color: var(--CoralAccent);
+}
+
+.RolCliente {
+    background: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep);
+}
+
+.FilaAcciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media (max-width: 1080px) {
+    .GridAdmin {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .SeccionAdmin {
+        padding: 28px 16px 78px;
+    }
+
+    .TarjetaAdmin {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .FilaDoble {
+        grid-template-columns: 1fr;
+    }
+
+    .FilaBotones,
+    .FilaAcciones {
+        flex-direction: column;
+    }
+
+    .BotonPrincipal,
+    .BotonSecundario,
+    .BotonEditar {
+        width: 100%;
+        justify-content: center;
+    }
+}

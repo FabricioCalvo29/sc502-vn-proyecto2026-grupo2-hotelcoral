@@ -13,8 +13,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Zain&family=Quicksand:wght@400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700&family=Chiron+GoRound+TC:wght@400;500;700&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -23,89 +23,78 @@
     <header id="FragmentoHeader"></header>
 
     <main class="SeccionMiCuenta">
-
         <h1 class="TituloMiCuenta">Mi Cuenta</h1>
 
         <section class="IntroMiCuenta">
             <p class="SubtituloMiCuenta">
-                Accede a tu perfil o crea una cuenta para administrar tus reservas y tu información personal.
+                Consulta tu información personal, tus reservas y tus comentarios desde un solo lugar.
             </p>
         </section>
 
         <section class="ContenedorMiCuenta">
 
             <article class="TarjetaCuenta">
-                <h2 class="TituloTarjeta">Iniciar sesión</h2>
-                <p class="TextoTarjeta">
-                    Ingresa con tu correo y contraseña para consultar tu cuenta.
-                </p>
+                <div class="EncabezadoTarjetaCuenta">
+                    <div>
+                        <h2 class="TituloTarjeta">Mi perfil</h2>
+                        <p class="TextoTarjeta">
+                            Información general de tu cuenta.
+                        </p>
+                    </div>
 
-                <form class="FormularioCuenta" id="FormularioLogin" action="#" method="post">
+                    <button type="button" class="BotonCuenta" id="BotonCerrarSesion">Cerrar sesión</button>
+                </div>
+
+                <div id="MensajeMiCuenta" class="MensajeFormulario" aria-live="polite"></div>
+
+                <div id="ContenedorDatosUsuario" class="ContenedorDatosCuenta">
                     <div class="Campo">
-                        <label for="correoLogin">Correo electrónico</label>
-                        <input type="email" id="correoLogin" name="correoLogin" placeholder="ejemplo@email.com">
+                        <label>Nombre completo</label>
+                        <p id="TextoNombreCompleto">Cargando...</p>
                     </div>
 
                     <div class="Campo">
-                        <label for="contrasenaLogin">Contraseña</label>
-                        <input type="password" id="contrasenaLogin" name="contrasenaLogin"
-                            placeholder="Ingresa tu contraseña">
+                        <label>Correo electrónico</label>
+                        <p id="TextoCorreoUsuario">Cargando...</p>
                     </div>
 
-                    <button type="submit" class="BotonCuenta">Ingresar</button>
-                </form>
+                    <div class="Campo">
+                        <label>Teléfono</label>
+                        <p id="TextoTelefonoUsuario">Cargando...</p>
+                    </div>
 
-                <p class="TextoExtra">
-                    ¿Olvidaste tu contraseña?
-                    <a href="#">Recuperar acceso</a>
-                </p>
+                    <div class="Campo">
+                        <label>Fecha de registro</label>
+                        <p id="TextoFechaRegistro">Cargando...</p>
+                    </div>
+
+                    <div class="Campo">
+                        <label>Estado de cuenta</label>
+                        <p id="TextoEstadoUsuario">Cargando...</p>
+                    </div>
+                </div>
             </article>
 
             <article class="TarjetaCuenta">
-                <h2 class="TituloTarjeta">Crear cuenta</h2>
+                <h2 class="TituloTarjeta">Mis reservas</h2>
                 <p class="TextoTarjeta">
-                    Regístrate para guardar tus datos y facilitar futuras reservas.
+                    Aquí podrás consultar el historial de tus reservas.
                 </p>
 
-                <form class="FormularioCuenta" id="FormularioRegistro" action="#" method="post">
-                    <div class="FilaDoble">
-                        <div class="Campo">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
-                        </div>
+                <div id="ContenedorReservas" class="ContenedorListadoCuenta">
+                    <p class="TextoVacio">Cargando reservas...</p>
+                </div>
+            </article>
 
-                        <div class="Campo">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
-                        </div>
-                    </div>
+            <article class="TarjetaCuenta">
+                <h2 class="TituloTarjeta">Mis comentarios</h2>
+                <p class="TextoTarjeta">
+                    Aquí podrás revisar los comentarios que has realizado en el sistema.
+                </p>
 
-                    <div class="Campo">
-                        <label for="correoRegistro">Correo electrónico</label>
-                        <input type="email" id="correoRegistro" name="correoRegistro" placeholder="ejemplo@email.com">
-                    </div>
-
-                    <div class="Campo">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="8888-8888">
-                    </div>
-
-                    <div class="FilaDoble">
-                        <div class="Campo">
-                            <label for="contrasenaRegistro">Contraseña</label>
-                            <input type="password" id="contrasenaRegistro" name="contrasenaRegistro"
-                                placeholder="Crea una contraseña">
-                        </div>
-
-                        <div class="Campo">
-                            <label for="confirmarContrasena">Confirmar contraseña</label>
-                            <input type="password" id="confirmarContrasena" name="confirmarContrasena"
-                                placeholder="Repite tu contraseña">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="BotonCuenta">Registrarme</button>
-                </form>
+                <div id="ContenedorComentarios" class="ContenedorListadoCuenta">
+                    <p class="TextoVacio">Cargando comentarios...</p>
+                </div>
             </article>
 
         </section>
@@ -115,6 +104,7 @@
 
     <script src="js/CargarFragmento.js"></script>
     <script src="js/Header.js"></script>
+    <script src="js/Publico/MiCuenta.js"></script>
 </body>
 
 </html>

@@ -1,186 +1,261 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    margin: 0;
-    font-family: "Chiron GoRound TC", sans-serif;
-    background: linear-gradient(to bottom, #eaf5f4 0%, #f8fbfb 45%, #ffffff 100%);
-    color: #243238;
+    background:
+        linear-gradient(180deg, rgba(245, 239, 230, 0.96), rgba(127, 214, 207, 0.12)),
+        var(--SoftCream, #F5EFE6);
+    color: var(--TextDark, #243238);
 }
 
 .SeccionMiCuenta {
     width: 100%;
-    padding: 40px 0 70px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(32px, 6vw, 72px) 20px 92px;
 }
 
 .TituloMiCuenta {
+    margin: 0 0 12px;
     font-family: "Zain", sans-serif;
-    font-size: 40px;
+    font-size: clamp(2.7rem, 5vw, 4rem);
+    line-height: 0.95;
     text-align: center;
-    margin-top: 40px;
-    color: #243238;
-    line-height: 1;
+    color: var(--OceanDeep, #2C6E7F);
 }
 
 .IntroMiCuenta {
-    width: 90%;
-    max-width: 760px;
-    margin: 18px auto 30px;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 34px;
     text-align: center;
 }
 
 .SubtituloMiCuenta {
+    margin: 0;
     font-family: "Chiron GoRound TC", sans-serif;
-    font-size: 18px;
-    color: #4f5d61;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(36, 50, 56, 0.88);
 }
 
 .ContenedorMiCuenta {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
-    align-items: start;
 }
 
 .TarjetaCuenta {
-    background: #ffffff;
-    padding: 32px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.10);
-    border: 1px solid rgba(28, 107, 115, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 28px;
+    border-radius: 22px;
+    border: 1px solid rgba(44, 110, 127, 0.10);
+    box-shadow: 0 18px 36px rgba(36, 50, 56, 0.08);
+}
+
+.EncabezadoTarjetaCuenta {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 18px;
+    margin-bottom: 16px;
 }
 
 .TituloTarjeta {
+    margin: 0 0 10px;
     font-family: "Zain", sans-serif;
-    font-size: 32px;
-    color: #1c6b73;
-    margin-bottom: 10px;
+    font-size: 2rem;
     line-height: 1;
+    color: var(--OceanDeep, #2C6E7F);
 }
 
 .TextoTarjeta {
+    margin: 0;
     font-family: "Chiron GoRound TC", sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #5c6a6e;
-    margin-bottom: 24px;
+    font-size: 1rem;
+    line-height: 1.72;
+    color: rgba(36, 50, 56, 0.82);
 }
 
-.FormularioCuenta {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.MensajeFormulario {
+    display: none;
+    margin-bottom: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
 }
 
-.FilaDoble {
+.BotonCuenta {
+    width: auto;
+    min-height: 50px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--OceanDeep, #2C6E7F), #317f94);
+    color: #ffffff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.96rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 12px 24px rgba(44, 110, 127, 0.18);
+    transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease;
+}
+
+.BotonCuenta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(44, 110, 127, 0.22);
+    filter: brightness(1.02);
+}
+
+.BotonCuenta:disabled {
+    opacity: 0.72;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ContenedorDatosCuenta {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
 }
 
 .Campo {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2px;
+    gap: 8px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: rgba(127, 214, 207, 0.08);
+    border: 1px solid rgba(44, 110, 127, 0.08);
 }
 
 .Campo label {
-    margin-bottom: 6px;
+    margin: 0;
     font-family: "Quicksand", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #243238;
-}
-
-.Campo input {
-    width: 100%;
-    padding: 11px 12px;
-    border-radius: 10px;
-    border: 1px solid #cfd8d7;
-    font-size: 14px;
-    font-family: "Quicksand", sans-serif;
-    background: #ffffff;
-    transition: 0.25s ease;
-}
-
-.Campo input::placeholder {
-    color: #9aa4a6;
-}
-
-.Campo input:focus {
-    outline: none;
-    border: 1px solid #1c6b73;
-    box-shadow: 0 0 5px rgba(28, 107, 115, 0.25);
-}
-
-.BotonCuenta {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: #1c6b73;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-top: 4px;
-}
-
-.BotonCuenta:hover {
-    background: #14545a;
-}
-
-.TextoExtra {
-    margin-top: 16px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #6b6b6b;
-    font-family: "Quicksand", sans-serif;
-}
-
-.TextoExtra a {
-    color: #1c6b73;
-    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 700;
+    color: var(--OceanDeep, #2C6E7F);
 }
 
-.TextoExtra a:hover {
-    text-decoration: underline;
+.Campo p {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 1rem;
+    line-height: 1.68;
+    color: var(--TextDark, #243238);
 }
 
-@media (max-width: 900px) {
-    .ContenedorMiCuenta {
+.ContenedorListadoCuenta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.TarjetaListadoCuenta {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(156, 126, 94, 0.16);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(36, 50, 56, 0.06);
+}
+
+.EncabezadoListadoCuenta {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.TituloListadoCuenta {
+    margin: 0;
+    font-family: "Zain", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--OceanDeep, #2C6E7F);
+}
+
+.EtiquetaEstadoCuenta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(73, 183, 177, 0.14);
+    color: var(--OceanDeep, #2C6E7F);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.CuerpoListadoCuenta {
+    display: grid;
+    gap: 8px;
+}
+
+.CuerpoListadoCuenta p {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.68;
+    color: var(--TextDark, #243238);
+}
+
+.BloqueRespuestaCuenta {
+    margin-top: 12px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(245, 239, 230, 0.82);
+    border-left: 4px solid var(--SeaTurquoise, #49B7B1);
+}
+
+.TextoVacio {
+    margin: 0;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: rgba(127, 214, 207, 0.08);
+    border: 1px dashed rgba(44, 110, 127, 0.16);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: rgba(36, 50, 56, 0.84);
+}
+
+@media (max-width: 760px) {
+
+    .EncabezadoTarjetaCuenta,
+    .EncabezadoListadoCuenta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ContenedorDatosCuenta {
         grid-template-columns: 1fr;
     }
+
+    .BotonCuenta {
+        width: 100%;
+    }
 }
 
-@media (max-width: 600px) {
-    .TituloMiCuenta {
-        font-size: 34px;
+@media (max-width: 640px) {
+    .SeccionMiCuenta {
+        padding: 28px 16px 78px;
     }
 
-    .SubtituloMiCuenta {
-        font-size: 16px;
-    }
-
-    .TarjetaCuenta {
-        padding: 24px 20px;
-    }
-
-    .FilaDoble {
-        grid-template-columns: 1fr;
+    .TarjetaCuenta,
+    .TarjetaListadoCuenta {
+        padding: 22px 18px;
+        border-radius: 18px;
     }
 
     .TituloTarjeta {
-        font-size: 28px;
+        font-size: 1.8rem;
+    }
+
+    .TituloListadoCuenta {
+        font-size: 1.45rem;
     }
 }

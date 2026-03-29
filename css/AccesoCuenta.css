@@ -1,0 +1,211 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(180deg, rgba(241, 238, 234, 0.92), rgba(127, 214, 207, 0.18)),
+        var(--SoftCream);
+    color: var(--TextDark);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+.SeccionMiCuenta {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: clamp(32px, 6vw, 72px) 20px 88px;
+}
+
+.TituloMiCuenta {
+    margin: 0 0 12px;
+    font-family: "Zain", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 0.95;
+    color: var(--OceanDeep);
+    text-align: center;
+}
+
+.IntroMiCuenta {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.SubtituloMiCuenta {
+    margin: 0;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: var(--TextDark);
+    opacity: 0.92;
+}
+
+.ContenedorMiCuenta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+    align-items: start;
+}
+
+.TarjetaCuenta {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(44, 110, 127, 0.10);
+    border-radius: 22px;
+    box-shadow: 0 18px 38px rgba(36, 50, 56, 0.08);
+    padding: 30px 28px;
+    backdrop-filter: blur(6px);
+}
+
+.TituloTarjeta {
+    margin: 0 0 10px;
+    font-family: "Zain", sans-serif;
+    font-size: 2rem;
+    color: var(--OceanDeep);
+    line-height: 1;
+}
+
+.TextoTarjeta {
+    margin: 0 0 18px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--TextDark);
+    opacity: 0.9;
+}
+
+.MensajeFormulario {
+    display: none;
+    margin-bottom: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.FormularioCuenta {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.FilaDoble {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.Campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Campo label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--TextDark);
+}
+
+.Campo input,
+.Campo select,
+.Campo textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 15px;
+    border: 1px solid rgba(156, 126, 94, 0.26);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.98rem;
+    color: var(--TextDark);
+    transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+    box-sizing: border-box;
+}
+
+.Campo input::placeholder,
+.Campo textarea::placeholder {
+    color: rgba(36, 50, 56, 0.55);
+}
+
+.Campo input:focus,
+.Campo select:focus,
+.Campo textarea:focus {
+    outline: none;
+    border-color: var(--SeaTurquoise);
+    box-shadow: 0 0 0 4px rgba(73, 183, 177, 0.16);
+    transform: translateY(-1px);
+}
+
+.BotonCuenta {
+    appearance: none;
+    border: none;
+    border-radius: 14px;
+    min-height: 52px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, var(--OceanDeep), #317f94);
+    color: #ffffff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(44, 110, 127, 0.18);
+    transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease;
+}
+
+.BotonCuenta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(44, 110, 127, 0.22);
+    filter: brightness(1.02);
+}
+
+.BotonCuenta:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.TextoExtra {
+    margin: 18px 0 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.94rem;
+    color: rgba(36, 50, 56, 0.84);
+}
+
+.TextoExtra a {
+    color: var(--CoralAccent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.TextoExtra a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+    .ContenedorMiCuenta {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .SeccionMiCuenta {
+        padding: 28px 16px 78px;
+    }
+
+    .TarjetaCuenta {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
+    .FilaDoble {
+        grid-template-columns: 1fr;
+    }
+
+    .TituloTarjeta {
+        font-size: 1.8rem;
+    }
+}

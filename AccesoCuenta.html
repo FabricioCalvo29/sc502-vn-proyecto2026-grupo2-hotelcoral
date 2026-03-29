@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Coral | Acceso a tu cuenta</title>
+
+    <link rel="stylesheet" href="css/HeaderStyle.css">
+    <link rel="stylesheet" href="css/FooterStyle.css">
+    <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/MiCuenta.css">
+    <link rel="stylesheet" href="css/AccesoCuenta.css">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700&family=Chiron+GoRound+TC:wght@400;500;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="FragmentoHeader"></header>
+
+    <main class="SeccionMiCuenta">
+        <h1 class="TituloMiCuenta">Acceso a tu cuenta</h1>
+
+        <section class="IntroMiCuenta">
+            <p class="SubtituloMiCuenta">
+                Inicia sesión o crea una cuenta para administrar tus reservas y tu información personal.
+            </p>
+        </section>
+
+        <section class="ContenedorMiCuenta">
+
+            <article class="TarjetaCuenta">
+                <h2 class="TituloTarjeta">Iniciar sesión</h2>
+                <p class="TextoTarjeta">
+                    Ingresa con tu correo y contraseña para entrar a tu cuenta.
+                </p>
+
+                <div id="MensajeLogin" class="MensajeFormulario" aria-live="polite"></div>
+
+                <form class="FormularioCuenta" id="FormularioLogin" method="post" novalidate>
+                    <div class="Campo">
+                        <label for="InputCorreoLogin">Correo electrónico</label>
+                        <input type="email" id="InputCorreoLogin" name="Correo" placeholder="ejemplo@email.com"
+                            autocomplete="email" required>
+                    </div>
+
+                    <div class="Campo">
+                        <label for="InputContrasenaLogin">Contraseña</label>
+                        <input type="password" id="InputContrasenaLogin" name="Contrasena"
+                            placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+                    </div>
+
+                    <button type="submit" class="BotonCuenta" id="BotonIngresar">Ingresar</button>
+                </form>
+            </article>
+
+            <article class="TarjetaCuenta">
+                <h2 class="TituloTarjeta">Crear cuenta</h2>
+                <p class="TextoTarjeta">
+                    Regístrate para guardar tus datos y facilitar futuras reservas.
+                </p>
+
+                <div id="MensajeRegistro" class="MensajeFormulario" aria-live="polite"></div>
+
+                <form class="FormularioCuenta" id="FormularioRegistro" method="post" novalidate>
+                    <div class="FilaDoble">
+                        <div class="Campo">
+                            <label for="InputNombre">Nombre</label>
+                            <input type="text" id="InputNombre" name="Nombre" placeholder="Tu nombre"
+                                autocomplete="given-name" required>
+                        </div>
+
+                        <div class="Campo">
+                            <label for="InputApellido">Apellido</label>
+                            <input type="text" id="InputApellido" name="Apellido" placeholder="Tu apellido"
+                                autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <div class="Campo">
+                        <label for="InputCorreoRegistro">Correo electrónico</label>
+                        <input type="email" id="InputCorreoRegistro" name="Correo" placeholder="ejemplo@email.com"
+                            autocomplete="email" required>
+                    </div>
+
+                    <div class="Campo">
+                        <label for="InputTelefono">Teléfono</label>
+                        <input type="tel" id="InputTelefono" name="Telefono" placeholder="8888-8888" autocomplete="tel">
+                    </div>
+
+                    <div class="FilaDoble">
+                        <div class="Campo">
+                            <label for="InputContrasenaRegistro">Contraseña</label>
+                            <input type="password" id="InputContrasenaRegistro" name="Contrasena"
+                                placeholder="Crea una contraseña" autocomplete="new-password" required>
+                        </div>
+
+                        <div class="Campo">
+                            <label for="InputConfirmarContrasena">Confirmar contraseña</label>
+                            <input type="password" id="InputConfirmarContrasena" name="ConfirmarContrasena"
+                                placeholder="Repite tu contraseña" autocomplete="new-password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="BotonCuenta" id="BotonRegistrarse">Registrarme</button>
+                </form>
+            </article>
+
+        </section>
+    </main>
+
+    <footer id="FragmentoFooter"></footer>
+
+    <script src="js/CargarFragmento.js"></script>
+    <script src="js/Header.js"></script>
+    <script src="js/Publico/AccesoCuenta.js"></script>
+</body>
+
+</html>
